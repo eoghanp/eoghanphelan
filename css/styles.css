@@ -498,8 +498,9 @@ nav {
 }
 
 .logo-badge {
-    height: 40px;
-    width: auto;
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -511,7 +512,8 @@ nav {
 
     /* Keep logo badge visible and sized appropriately on mobile */
     .logo-badge {
-        height: 35px;
+        height: 25px;
+        width: 25px;
     }
 }
 
