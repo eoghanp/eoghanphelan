@@ -488,6 +488,34 @@ nav {
     transform: scale(1.02);
 }
 
+
+
+/* Logo Badge */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-badge {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-badge:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+    /* Keep logo badge visible and sized appropriately on mobile */
+    .logo-badge {
+        height: 35px;
+    }
+}
+
+
 /* Speaking Section */
 #speaking {
     padding: 100px 0;
