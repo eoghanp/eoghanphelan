@@ -697,7 +697,7 @@ footer {
 
     .services-wrapper.active,
     .about-wrapper.active {
-        max-height: 3000px;
+        max-height: 10000px;
         /* Large enough to fit content */
         opacity: 1;
         transform: translateX(0);
