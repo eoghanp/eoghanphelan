@@ -298,9 +298,8 @@ nav {
 
 .problem-item:hover {
     transform: translateY(-5px);
-    background-color: #e2e8f0;
-    /* Slate 200 on hover */
-    box-shadow: none;
+    background-color: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
 }
 
 .problem-icon {
@@ -338,7 +337,8 @@ nav {
 
 .problem-item p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .target-audience {
@@ -368,13 +368,12 @@ nav {
     font-size: 1.5rem;
     color: var(--text-primary);
     margin-bottom: 30px;
-    border-bottom: 1px solid var(--border-color);
     padding-bottom: 15px;
-    text-align: center;
-    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    text-align: left;
+    font-weight: 700;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 15px;
 }
 
@@ -386,34 +385,30 @@ nav {
 }
 
 .service-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    /* Increased gap for clarity */
+    row-gap: 50px;
 }
 
 .service-card {
-    background-color: var(--surface-color);
-    padding: 40px;
-    /* Increased padding for breathing room */
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    padding: 0 0 0 20px;
+    border-radius: 0;
+    border: none;
+    border-left: 3px solid transparent;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 300px;
-    max-width: 400px;
+    box-shadow: none;
+    text-align: left;
+    display: block;
+    max-width: none;
     width: 100%;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateX(10px);
+    border-left-color: var(--accent-color);
+    box-shadow: none;
 }
 
 .service-card h4 {
@@ -427,9 +422,9 @@ nav {
 
 .service-card p {
     color: var(--text-secondary);
-    font-size: 1.05rem;
-    /* Larger body text */
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* About Section */
