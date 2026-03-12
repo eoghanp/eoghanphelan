@@ -449,13 +449,29 @@ nav {
 }
 
 .about-photo {
-    width: 280px;
+    width: 100%;
     height: auto;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.02);
+}
+
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 320px;
     flex-shrink: 0;
+}
+
+.about-gallery .about-photo:first-child {
+    grid-column: span 2;
 }
 
 .about-text {
@@ -654,7 +670,13 @@ footer {
 
     .about-photo {
         width: 100%;
+        max-width: none;
+    }
+
+    .about-gallery {
+        width: 100%;
         max-width: 400px;
+        margin: 0 auto 30px auto;
     }
 
     /* Mobile Collapsible Sections */
